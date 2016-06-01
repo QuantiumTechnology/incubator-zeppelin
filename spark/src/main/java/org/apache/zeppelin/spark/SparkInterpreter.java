@@ -74,7 +74,6 @@ import scala.collection.mutable.HashSet;
 import scala.tools.nsc.Settings;
 import scala.tools.nsc.interpreter.Completion.Candidates;
 import scala.tools.nsc.interpreter.Completion.ScalaCompleter;
-import scala.tools.nsc.settings.MutableSettings;
 import scala.tools.nsc.settings.MutableSettings.BooleanSetting;
 import scala.tools.nsc.settings.MutableSettings.PathSetting;
 
@@ -454,12 +453,6 @@ public class SparkInterpreter extends Interpreter {
     settings.scala$tools$nsc$settings$StandardScalaSettings$_setter_$usejavacp_$eq(b);
 
     PrintStream printStream = new PrintStream(out);
-
-    // To prevent 'File name too long' error on some file system.
-    MutableSettings.IntSetting numClassFileSetting = settings.maxClassfileName();
-    numClassFileSetting.v_$eq(128);
-    settings.scala$tools$nsc$settings$ScalaSettings$_setter_$maxClassfileName_$eq(
-        numClassFileSetting);
 
     /* spark interpreter */
     this.interpreter = new SparkILoop(null, new PrintWriter(out));
