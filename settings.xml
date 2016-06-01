@@ -1,0 +1,19 @@
+<settings>
+	 <proxies>
+		<proxy>
+		<id>myproxy-http</id>
+		<active>true</active>
+		<protocol>http</protocol>
+		<host>192.168.16.1</host>
+		<port>8080</port>
+		</proxy>
+		<proxy>
+		<id>myproxy-https</id>
+		<active>true</active>
+		<protocol>https</protocol>
+		<host>192.168.16.1</host>
+		<port>8080</port>
+		</proxy>
+	</proxies>
+
+</settings>
