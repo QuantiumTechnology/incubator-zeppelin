@@ -468,7 +468,6 @@ public class SparkInterpreter extends Interpreter {
     numClassFileSetting.v_$eq(128);
     settings.scala$tools$nsc$settings$ScalaSettings$_setter_$maxClassfileName_$eq(
         numClassFileSetting);
-    
 
     synchronized (sharedInterpreterLock) {
       /* create scala repl */
