@@ -108,6 +108,9 @@
             <goals>
               <goal>npm</goal>
             </goals>
+            <configuration>
+            <arguments>install --proxy=http://192.168.16.1:8080</arguments>
+            </configuration>
           </execution>
 
           <execution>
