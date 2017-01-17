@@ -99,6 +99,7 @@
             </goals>
             <configuration>
               <nodeVersion>v0.12.13</nodeVersion>
+              <nodeDownloadRoot>http://repo.build.quantium.com.au/artifactory/simple/nodejs-remote/</nodeDownloadRoot>
               <npmVersion>2.15.0</npmVersion>
             </configuration>
           </execution>
@@ -108,6 +109,9 @@
             <goals>
               <goal>npm</goal>
             </goals>
+            <configuration>
+              <arguments>install --proxy=http://192.168.16.1:8080</arguments>
+            </configuration>
           </execution>
 
           <execution>
